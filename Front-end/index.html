@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Lion School</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <section id="home">
+        <header>
+            <img src="../Imgs/logo.png" alt="Logo" class="logo">
+            <button class="btn-sair">Sair</button>
+        </header>
+
+        <main class="main-home" id="conteudo-home"></main>
+    </section>
+
+    <section id="pagina-alunos" style="display: none;">
+        <header class="header-alunos">
+            <img src="../Imgs/logo.png" class="logo-pequena">
+            <button class="btn-voltar" onclick="irParaHome()">Voltar</button>
+        </header>
+
+        <main class="main-alunos-container">
+            <h1 id="titulo-dinamico"></h1>
+            <div class="grid-alunos"></div>
+        </main>
+    </section>
+
+    <footer>
+        <div class="footer-contatos">
+            <div class="contato-item">
+                <img src="../Imgs/Vector.png" alt="" class="logo-telefone">
+                <span>(11) 4774-4700</span>
+            </div>
+            <div class="contato-item">
+                <img src="../Imgs/icon-email.svg" alt="" class="logo-email"> <span>lionschool@gmail.com</span>
+            </div>
+            <div class="contato-item"> <img src="../Imgs/Vector.svg" alt="" class="logo-local"> <span>Rua tcc, 211,
+                    Centro, Jandira</span> </div>
+        </div>
+        <div class="footer-copyright">
+            <p>Copyright © 2022 | Yuri Silva</p>
+        </div>
+        <div class="footer-redes"> <img src="../Imgs/youtube.svg" alt="Youtube"> <img src="../Imgs/twitter.svg"
+                alt="Twitter"> <img src="../Imgs/instagram.svg" alt="Instagram">
+            <img src="../Imgs/facebook.svg" alt="Facebook">
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+
+    <script>
+        function irParaAlunos(nomeCurso) {
+            home.style.display = 'none';
+            document.getElementById('pagina-alunos').style.display = 'block';
+            document.getElementById('titulo-dinamico').innerText = nomeCurso;
+        }
+
+        function irParaHome() {
+            home.style.display = 'block';
+            document.getElementById('pagina-alunos').style.display = 'none';
+        }
+    </script>
+
+</body>
+
+</html>
