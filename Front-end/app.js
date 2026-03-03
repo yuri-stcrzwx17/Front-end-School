@@ -37,7 +37,7 @@ function renderizarHome(cursos) {
         </div>
 
         <div class="main-direito" id="lista-botoes-cursos"></div>
-    `;
+    `
 
     const area = document.getElementById('lista-botoes-cursos');
 
